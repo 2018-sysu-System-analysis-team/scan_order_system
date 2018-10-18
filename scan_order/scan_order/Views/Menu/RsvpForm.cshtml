@@ -1,0 +1,29 @@
+﻿@model scan_order.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            <p>Your name:@Html.TextBoxFor(x =>x.Name)</p>
+            <p>Your Email:@Html.TextBoxFor(x =>x.Email)</p>
+            <p>Your phone:@Html.TextBoxFor(x=>x.phone)</p>
+            <p>
+                will you attend?
+                @Html.DropDownListFor(x => x.WillAttend, new[] { new SelectListItem() { Text = "yes", Value = bool.TrueString }, new SelectListItem() { Text = "NO", Value = bool.FalseString } }, "choose an option");
+            </p>
+            <input type="submit" value="Submit RSVP"/>
+        }
+    </div>
+</body>
+</html>

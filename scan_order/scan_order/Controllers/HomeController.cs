@@ -8,8 +8,10 @@ namespace scan_order.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ViewResult Index()
+
         {
+
             return View();
         }
 
@@ -25,6 +27,10 @@ namespace scan_order.Controllers
 
             return View();
         }
+        public string ina()
+        {
+            return "adasd";
+        }
 
         public ActionResult Contact()
         {
@@ -32,5 +38,6 @@ namespace scan_order.Controllers
 
             return View();
         }
+
     }
 }
